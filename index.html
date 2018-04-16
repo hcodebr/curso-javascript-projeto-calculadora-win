@@ -1,0 +1,163 @@
+<!--                                                                                               
+                                                                                                    
+                                       /-`      -//-      ```                                       
+                                       /+/.`    -++:.   `.///                                       
+                            .--`       /+++:   -:++++`  :+++/       `--.                            
+                            /++:-      /+++/:``++++++``:/+++/      -:++/                            
+                            :/+++////-`++++++.`++++++`.++++++`-////+++/:                            
+                    ````` ``.-++++++++/++++++//++++++//++++++/++++++++.`   `````                    
+                    .:+++-:+++++++++++++++++++++++++++++++++++++++++++:----++++:                    
+                     `/+++:./+++++++++++++++++++++++++++++++++++++++++++++++++-.                    
+                  `//:.:++//++++++++++++++++++++++++++++++++++++++++++++++++++///`                  
+                  `+++/++++++++++++++++++++++++++++++++++++++++++++++++++++++++++`                  
+           -------:++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++:-----`            
+           .:/++++//-..:+///+++++++/////////.................//////+++++////:.///+++++/-            
+          ```.++/-../+++o..`//+///-`........````:++++++++++-`.....`/////`...``...://++.```          
+        .:++++:-.+oooooooo/. `:-....ooooooooooooooooooooooooooooo/...   ./ooooooo-. :+++++:.        
+       `++++++ -oooooooooooo``:+oooooooooooooooooooooooooooooooooooo+:``ooooooooooo:--++++/-`       
+       `./++:./+oooooooooo/-/+oooooooooooooooooooooooooooooooooooooooo+/-/oooooooooo-`++++:         
+     `://+++- ooooooooooo`-+oooooooooooooooooooooooooooooooooooooooooooo+:.oooooooooo+`-+++//:`     
+    .+++++++- ooooooooo+/.:oooooooooooooooooooooooooooooooooooooooooooooooo -ooooooooo -+++++++.    
+    .+++++++:-:/ooooooo- oooooooooooooooooooooooooooooooooooooooooooooooooo:::oooooo/:-:+++++++.    
+   :/+++++++++ -oooooo.:/ooooooooooooooo/..-oooooooooooo-../oooooooooooooooo: +ooooo- +++++++++/:   
+   ://++++++++/:`/+++/ :oooooooooooooooooooooooooooooooooooooooooooooooooooo: /+++/`:/++++++++//:   
+      :++++++++++-..`  :oooooooooooooooooooooooooooooooooooooooooooooooooooo:  `..-++++++++++:      
+      :+++++++++++++:- :oooooooooooooooooooooooooooooooooooooooooooooooooooo: -:+++++++++++++:      
+    `:/++++++++++++++/ :oooooooooooooooooooooooooooooooooooooooooooooooooooo: /++++++++++++++/:`    
+   ::///+++++++++++++/ :oooooooooooooooooooooooo+++++oooooooooooooooooooooo+:`/+++++++++++/////::   
+       `:::++++++++++/.:/oooooooooooooooooooo+//:----/+oooooooooooooooooooo -/+++++++++/::-         
+           -:++++++++++- oooooooooooooooooo+-:::+oooo::-+oooooooooooooooo/--:+++++++++-`            
+            `./++++++++/:.:oooooooooooooooo/ /oooooooo/ .-ooooooooooooooo- +++++++++-`              
+              `./++++++++```/+ooooooooooooo+`:++ooooo+:`/+oooooooooooo+/.:/++++++++/.               
+                 -:++++++/:.`./oooooooooooooo:--:////-:oooooooooooooo/.`/++++++++:-                 
+                  `-/+++++++:. .:ooooooooooooooo/::::ooooooooooooooo/ .:++++++---`                  
+                    ```://////:.`./ooooooooooooooooooooooooooooooo+-.://///```                      
+                        `````./:- ``+ooooooooooooooooooooooooooo+:`  ``````                         
+                                     ./oooooooooooooooooooooo///`                                   
+                                       ---+oooooooooooooooo/-                                       
+                                          .-ooooooooooooo+.`                                        
+                                            `:++++ooo+++.`                                          
+                                                  ///`                                              
+                                                                                                    
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Hcode Treinamentos">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculadora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+    body {
+        background-color:#050505;
+    }
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        
+    }
+    #calculadora {
+        background-color: #B1B1B1;
+        width: 322px;
+        height: 500px;
+        padding: 6px;
+    }
+    #calculadora .btn {
+        margin: 2px;
+        border-radius: 0;
+        min-height: 44px;
+        outline: none;
+        box-shadow: none;
+    }
+    #calculadora .btn:hover {
+        background-color: #BCBCBC;
+    }
+    #calculadora .btn:active {
+        background-color: #909090;
+    }
+    header {
+        height: 205px;
+        font-size: 36px;
+        font-weight: bold;
+        position: relative;
+    }
+    #display {
+        color: #000;
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        font-size: 48px;
+        font-weight: 600;
+    }
+    .btn-number {
+        background-color: #EFEFEF;
+        font-size: 24px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-weight: 600;
+    }
+    .btn-others {
+        background-color: #D1D1D1;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="center">
+        <div id="calculadora">
+            <header>
+                <div id="display">
+                    0
+                </div>
+            </header>
+            <section class="container">
+                <div class="row">
+                    <button type="button" class="btn btn-others col-sm">%</button>
+                    <button type="button" class="btn btn-others col-sm">√</button>
+                    <button type="button" class="btn btn-others col-sm">x²</button>
+                    <button type="button" class="btn btn-others col-sm">¹/x</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-others col-sm">CE</button>
+                    <button type="button" class="btn btn-others col-sm">C</button>
+                    <button type="button" class="btn btn-others col-sm">←</button>
+                    <button type="button" class="btn btn-others col-sm">÷</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-number col-sm">7</button>
+                    <button type="button" class="btn btn-number col-sm">8</button>
+                    <button type="button" class="btn btn-number col-sm">9</button>
+                    <button type="button" class="btn btn-others col-sm">X</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-number col-sm">4</button>
+                    <button type="button" class="btn btn-number col-sm">5</button>
+                    <button type="button" class="btn btn-number col-sm">6</button>
+                    <button type="button" class="btn btn-others col-sm">-</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-number col-sm">1</button>
+                    <button type="button" class="btn btn-number col-sm">2</button>
+                    <button type="button" class="btn btn-number col-sm">3</button>
+                    <button type="button" class="btn btn-others col-sm">+</button>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-others col-sm">±</button>
+                    <button type="button" class="btn btn-number col-sm">0</button>
+                    <button type="button" class="btn btn-others col-sm">,</button>
+                    <button type="button" class="btn btn-others col-sm">=</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
